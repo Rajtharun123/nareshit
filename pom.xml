@@ -492,7 +492,21 @@
                         <version>2.1</version>
                     </plugin>
                 </plugins>
-            </reporting>
+                <server> 
+                    <id><maven-tomcat-war-deployment-server></id>
+                        <username>user1</username>
+                        <password>1234</password>
+                        </server>
+                 <plugin> 
+                     <groupId>org.apache.tomcat.maven</groupId>
+                     <artifactId>tomcat9-maven-plugin</artifactId>
+                     <version>2.0</version>
+                     <configuration>
+                         <url>http://43.204.235.29:8080/manager/text</url>
+                         <path>/mynew</path>
+                     </configuration>
+                    </plugin>
+                    </reporting>
         </profile>
     </profiles>
 </project>
